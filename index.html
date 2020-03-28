@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -12,38 +13,63 @@
 
 
   <div class="wrapper">
+    <section>
 
-    <header>
-      <a href="#" class="logo">Andrew Baker</a>
-      <nav>
-        <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script type="text/javascript">
-          $(document).on('click', 'ul li', function(){
-            $(this).addClass('active').siblings().removeClass('active')
-          })
-        </script>
-      </nav>
-    </header>
+      <header>
+        <a href="#" class="logo">Andrew Baker</a>
+        <nav>
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+          <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+          <script type="text/javascript">
+            $(document).on('click', 'ul li', function() {
+              $(this).addClass('active').siblings().removeClass('active')
+            })
+          </script>
+        </nav>
+      </header>
 
-    <div class="hero-content">
+      <div class="hero-content">
 
-      <p class="intro">I’m Andrew, an experience designer based in Grand Rapids.</p>
-      <div class="line"></div>
-      <h1>I solve complex user problems with a human-centered design approach.</h1>
+        <p class="intro">I’m Andrew, an experience designer based in Grand Rapids.</p>
 
-      <div class="buttons">
-        <button class="cta">View my work</button>
-        <button class="cta2">My Resume</button>
+        <div class="line"></div>
+
+        <h1>I solve complex user problems with a human-centered design approach.</h1>
+
+        <div class="buttons">
+          <button class="cta">View my work</button>
+          <button class="cta2">My Resume</button>
+        </div>
 
       </div>
+    </section>
 
-    </div>
+    <section>
+      <div class="section-intro">
+        <div class="line"></div>
+        <h2>What I've been working on</h2>
+      </div>
 
+      <a href="facebook.html">
+				<div class="project-container">
+					<div class="project-preview">
+						<img src="img/thecubemockup@2x.png">
+					</div>
+					<div class="project-details">
+						<div class="metadata">2019 - Redesign</div>
+						<div class="title">The Cube</div>
+						<div class="subtitle">Website Redesign</div>
+						<div class="body">Led a team in a redesign and rebrand of The Cube website. Involved in all aspects of the project inluding user research, rearranging information architecture, lo-fidelity wireframing, mockup and prototype.</div>
+					</div>
+				</div>
+			</a>
+
+
+    </section>
   </div>
 
 

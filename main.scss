@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap');
 $primary: #0018CE;
 $secondary: #fff;
+$break-med: 900px;
+$break-sml: 440px;
 
 * {
   box-sizing: border-box;
@@ -31,30 +33,33 @@ ul {
   height: 100vh;
 }
 
+section {
+  height: 100vh;
+}
+
 header {
   display: flex;
   justify-content: space-between;
+}
 
-  .logo {
-    font-weight: 800;
+.logo {
+  font-weight: 800;
+}
+
+ul {
+  display: flex;
+
+  li a {
+    padding: 0 0.6em;
+    font-weight: 300;
   }
 
-  ul {
-    display: flex;
-
+  li.active a {
+    font-weight: 500;
+  }
+  @media only screen and (min-width: 768px) {
     li a {
-      padding: 0 0.6em;
-      font-weight: 300;
-    }
-
-    li.active a{
-      font-weight: 500;
-    }
-
-    @media only screen and (min-width: 768px){
-      li a{
-        padding: 0 2em;
-      }
+      padding: 0 2em;
     }
   }
 }
@@ -62,7 +67,7 @@ header {
 .hero-content {
   max-width: 700px;
   position: relative;
-  top: 50%;
+  top: 47%;
   transform: translateY(-50%);
 }
 
@@ -78,13 +83,13 @@ header {
   margin: 1.5em 0;
 }
 
-h1{
+h1 {
   font-size: 2.5em;
-  margin: 0 0 .75em 0;
+  margin: 0 0 0.75em;
   padding: 0;
 }
 
-button{
+button {
   margin-top: 0;
   font-size: 1em;
   font-weight: 800;
@@ -93,13 +98,140 @@ button{
   cursor: pointer;
 }
 
-.cta{
+.cta {
   background-color: $primary;
-  color: $secondary;;
+  color: $secondary;
   margin-right: 10px;
 }
 
-.cta2{
-  border: 3px solid $primary;
-  background-color: $secondary;
+.cta2 {
+  border: 1px solid $primary;
+  background-color: transparent;
+}
+
+.section-intro {
+  position: relative;
+  top: 10%;
+}
+
+.project-container {
+  position: relative;
+  top: 20%;
+	display: flex;
+	flex-grow: 1;
+	height: 340px;
+	width: 100%;
+	margin-bottom: 80px;
+	transition: all 0.4s ease;
+
+	&:hover {
+		box-shadow: 0 10px 20px #c7cad1;
+		transform: translate(0, -5px);
+	}
+
+	@media screen and (max-width: $break-med) {
+		flex-direction: column;
+		height: 100%;
+	}
+
+	@media screen and (max-width: $break-sml) {
+		margin-bottom: 60px;
+	}
+
+	.project-preview {
+		flex-basis: 50%;
+		flex-shrink: 0;
+		overflow: hidden;
+		position: relative;
+		// padding-top: 680px / 1160px * 100%;
+		// height: 0;
+
+		@media screen and (max-width: $break-med) {
+			padding-top: 680px / 1160px * 100%;
+			height: 0;
+		}
+
+		img {
+			position: absolute;
+			// top: 0;
+			// left: 0;
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+
+			@media screen and (max-width: $break-med) {
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.project-details {
+		background-color: #F4F4F4;
+		padding: 40px;
+		// width: 50%;
+		box-sizing: border-box;
+
+		@media screen and (max-width: $break-sml) {
+			height: 140px;
+			padding: 20px;
+		}
+
+		.metadata {
+			font-size: .8em;
+			margin-bottom: 56px;
+
+			@media screen and (max-width: $break-med) {
+				margin-bottom: 36px;
+			}
+
+			@media screen and (max-width: $break-sml) {
+				margin-bottom: 24px;
+			}
+		}
+
+		.title {
+			font-size: 2em;
+			line-height: 1.2;
+			font-weight: 600;
+
+			@media screen and (max-width: 1100px) {
+				font-size: 2em;
+			}
+
+			@media screen and (max-width: $break-sml) {
+				font-size: 1.8em;
+			}
+		}
+
+		.subtitle {
+			font-size: 22px;
+			font-weight: 400;
+			margin-bottom: 24px;
+
+			@media screen and (max-width: $break-sml) {
+				font-size: 18px;
+			}
+		}
+
+		.body {
+			font-size: 15px;
+			line-height: 21px;
+
+			@media screen and (max-width: $break-sml) {
+				display: none;
+			}
+
+			object {
+				display: block;
+				margin-top: 4px;
+
+				img {
+					width: 11px;
+					height: 11px;
+					margin-left: 4px;
+				}
+			}
+		}
+	}
 }
