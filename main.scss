@@ -11,13 +11,30 @@ $break-sml: 440px;
   padding: 0;
 }
 
-body {
+body, html {
   font-family: "Montserrat";
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+h1{
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+p{
+  font-weight: 300;
 }
 
 ul {
@@ -35,6 +52,7 @@ ul {
 
 section {
   height: 100vh;
+  scroll-snap-type: y-mandatory;
 }
 
 header {
@@ -95,6 +113,7 @@ button {
   font-weight: 800;
   padding: 18px 32px;
   border-radius: 100px;
+  border: 1px solid $primary;
   cursor: pointer;
 }
 
@@ -112,4 +131,12 @@ button {
 .section-intro {
   position: relative;
   top: 10%;
+}
+
+.smspacer {
+  padding-top: 2em;
+}
+
+.row{
+  margin-top: 120px;
 }

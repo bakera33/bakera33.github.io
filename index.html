@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio Website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
 </head>
 
@@ -20,7 +21,7 @@
         <nav>
           <ul>
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="work.html">Work</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#">About</a></li>
           </ul>
           <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -41,24 +42,61 @@
         <h1>I solve complex user problems with a human-centered design approach.</h1>
 
         <div class="buttons">
-          <button class="cta">View my work</button>
+          <a href="#work"><button class="cta">View my work</button></a>
           <button class="cta2">My Resume</button>
         </div>
 
       </div>
     </section>
 
-    <section>
+    <section id="work">
       <div class="section-intro">
         <div class="line"></div>
         <h2>What I've been working on</h2>
       </div>
 
+      <div class="row">
+        <div class="col-md">
+          <img src="img/thecubemockup@2x.png" class="img-fluid">
+          <div class="smspacer"></div>
+          <p>Product Design</p>
+          <h2>The Cube</h2>
+          <p>Led a team in a redesign and rebrand of The Cube website. Involved in all aspects of the project inluding user research, rearranging information architecture, lo-fidelity wireframing, mockup and prototype.</p>
+          <a href="workfront_takeaways.html" class="button1">
+            <button type="button" name="button">View Project</button>
+          </a>
+          <div class="smspacer"></div>
+          <div class="smspacer"></div>
+        </div>
 
+        <div class="col-md-1"></div>
 
+        <div class="col-md">
+          <img src="img/thecubemockup@2x.png" class="img-fluid">
+          <div class="smspacer"></div>
+          <p>UX Design</p>
+          <h2>Dasher App Redesign</h2>
+          <p>Redesigning the DoorDash driver app to create an efficient and seamless delivery experience.</p>
+          <a href="workfront_takeaways.html" class="button1">
+            <button type="button" name="button">View Project</button>
+          </a>
+          <div class="smspacer"></div>
+        </div>
+      </div>
     </section>
-  </div>
 
+
+
+    <script>document.querySelectorAll('a[href^="#"]').forEach($anchor => {
+        $anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start' //scroll to top of the target element
+            });
+        });
+    });
+    </script>
 
 </body>
 
