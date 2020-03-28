@@ -14,7 +14,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 ul {
@@ -45,10 +45,8 @@ header {
       font-weight: 300;
     }
 
-    li.active a:after{
-      border-bottom: 2px solid $primary;
+    li.active a{
       font-weight: 500;
-      font-size: 40px;
     }
 
     @media only screen and (min-width: 768px){
