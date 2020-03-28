@@ -1,6 +1,7 @@
 /*font*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap');
 $primary: #0018CE;
+$secondary: #fff;
 
 * {
   box-sizing: border-box;
@@ -27,6 +28,7 @@ ul {
   padding: 1.5em;
   max-width: 1000px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 header {
@@ -59,7 +61,7 @@ header {
 
 .hero-content {
   max-width: 700px;
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -93,10 +95,11 @@ button{
 
 .cta{
   background-color: $primary;
-  color: #fff;
+  color: $secondary;;
   margin-right: 10px;
 }
 
 .cta2{
   border: 3px solid $primary;
+  background-color: $secondary;
 }

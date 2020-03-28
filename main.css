@@ -25,6 +25,7 @@ ul {
   padding: 1.5em;
   max-width: 1000px;
   margin: 0 auto;
+  height: 100vh;
 }
 
 header {
@@ -52,7 +53,7 @@ header ul li.active a {
 
 .hero-content {
   max-width: 700px;
-  position: absolute;
+  position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -92,6 +93,7 @@ button {
 
 .cta2 {
   border: 3px solid #0018CE;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */
