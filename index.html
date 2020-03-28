@@ -14,24 +14,20 @@
 
 
   <div class="wrapper">
+    <div class="navigation">
+    <header>
+      <a href="#" class="logo">Andrew Baker</a>
+      <nav>
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+      </nav>
+    </header>
+    </div>
     <section>
-
-      <header>
-        <a href="#" class="logo">Andrew Baker</a>
-        <nav>
-          <ul>
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-          <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-          <script type="text/javascript">
-            $(document).on('click', 'ul li', function() {
-              $(this).addClass('active').siblings().removeClass('active')
-            })
-          </script>
-        </nav>
-      </header>
 
       <div class="hero-content">
 
@@ -61,7 +57,7 @@
           <div class="smspacer"></div>
           <p>Product Design</p>
           <h2>The Cube</h2>
-          <p>Led a team in a redesign and rebrand of The Cube website. Involved in all aspects of the project inluding user research, rearranging information architecture, lo-fidelity wireframing, mockup and prototype.</p>
+          <p>Led a team in a redesign and rebrand of The Cube website.</p>
           <a href="workfront_takeaways.html" class="button1">
             <button type="button" name="button">View Project</button>
           </a>
@@ -84,19 +80,51 @@
         </div>
       </div>
     </section>
+  </div>
 
+  <script>
+    $(document).ready(function() {
+      $(document).on("scroll", onScroll);
 
+      // Trigger Click to go specific section or add active
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
 
-    <script>document.querySelectorAll('a[href^="#"]').forEach($anchor => {
-        $anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start' //scroll to top of the target element
-            });
+        $('a').each(function() {
+          $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash;
+        $target = $(target);
+
+        // Scrolling
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top + 2
+        }, 500, 'swing', function() {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
         });
+      });
     });
-    </script>
+
+    function onScroll(event) {
+      var scrollPosition = $(document).scrollTop();
+
+      // set your navigation a class name
+      $('nav a').each(function() {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+          $('nav ul li a').removeClass("active");
+          currentLink.addClass("active");
+        } else {
+          currentLink.removeClass("active");
+        }
+      });
+    }
+  </script>
 
 </body>
 

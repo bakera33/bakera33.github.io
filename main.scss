@@ -52,12 +52,13 @@ ul {
 
 section {
   height: 100vh;
-  scroll-snap-type: y-mandatory;
 }
+
 
 header {
   display: flex;
   justify-content: space-between;
+  background: white;
 }
 
 .logo {
@@ -70,6 +71,10 @@ ul {
   li a {
     padding: 0 0.6em;
     font-weight: 300;
+  }
+
+  li:last-child{
+    padding-right: 0;
   }
 
   li.active a {
