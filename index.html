@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+
+    <header>
+      <a href="#" class="logo">Andrew Baker</a>
+      <nav>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+          $(document).on('click', 'ul li', function(){
+            $(this).addClass('active').siblings().removeClass('active')
+          })
+        </script>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+
+      <p class="intro">I’m Andrew, an experience designer based in Grand Rapids.</p>
+      <div class="line"></div>
+      <h1>I solve complex user problems with a human-centered design approach.</h1>
+
+      <div class="buttons">
+        <button class="cta">View my work</button>
+        <button class="cta2">My Resume</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
