@@ -1259,7 +1259,7 @@
 .hvr-sweep-to-right:before {
   content: "";
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -1277,7 +1277,7 @@
   transition-timing-function: ease-out;
 }
 .hvr-sweep-to-right:hover, .hvr-sweep-to-right:focus, .hvr-sweep-to-right:active {
-  color: white;
+  color: black;
 }
 .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
   -webkit-transform: scaleX(1);

@@ -1,5 +1,15 @@
 /*font*/
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap");
+@font-face {
+  font-family: "CeraPro";
+  src: url("fonts/CeraPro-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CeraPro";
+  src: url("fonts/CeraPro-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,6 +43,11 @@ h3 {
 
 p {
   font-weight: 300;
+  font-family: "CeraPro", "Montserrat";
+}
+
+strong {
+  font-weight: bold;
 }
 
 .meta {
@@ -47,7 +62,7 @@ ul {
 }
 
 .wrapper {
-  padding: 1.5em;
+  padding: 0 1.5em;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
