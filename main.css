@@ -22,6 +22,7 @@ h1 {
 
 h2 {
   font-weight: 800;
+  padding-bottom: 1.5em;
 }
 
 h3 {
@@ -177,10 +178,6 @@ button {
 .profileimg {
   width: 100%;
   height: auto;
-}
-
-#about-row {
-  padding-top: 1.5em;
 }
 
 #footer {
