@@ -7,53 +7,55 @@
   <title>Portfolio Website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link href="hover.css" rel="stylesheet" media="all">
   <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-
   <div class="wrapper">
-    <div class="navigation">
-    <header>
-      <a href="#" class="logo">Andrew Baker</a>
-      <nav>
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-      </nav>
-    </header>
+
+    <!-- Navigation-->
+    <div class="container">
+      <header>
+        <a href="#" class="logo">Andrew Baker</a>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="mailto:bakera33@msu.edu"><i class="fa fa-envelope"></i></a>
+            <li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    <section>
+    <!--End Navigation-->
 
+    <!--Hero Section-->
+    <section id="home">
       <div class="hero-content">
-
         <p class="intro">I’m Andrew, an experience designer based in Grand Rapids.</p>
-
         <div class="line"></div>
-
         <h1>I solve complex user problems with a human-centered design approach.</h1>
-
         <div class="buttons">
-          <a href="#work"><button class="cta">View my work</button></a>
-          <button class="cta2">My Resume</button>
+          <a href="#work"><button aria-label="click to view work"class="cta hvr-grow">View my work</button></a>
+          <a href="img/ABaker-Resume.pdf" target="_blank"><button aria-label="click to view resume" class="cta2 hvr-grow">My Resume</button>
         </div>
-
       </div>
     </section>
+    <!--End Hero Section-->
 
+    <!--Work Showcase Section-->
     <section id="work">
       <div class="section-intro">
         <div class="line"></div>
         <h2>What I've been working on</h2>
       </div>
-
       <div class="row">
         <div class="col-md">
-          <img src="img/thecubemockup@2x.png" class="img-fluid">
+          <img src="img/thecubemockup@2x.png" alt="The cube website mockup on computer screen" class="img-fluid">
           <div class="smspacer"></div>
           <p>Product Design</p>
           <h2>The Cube</h2>
@@ -68,7 +70,7 @@
         <div class="col-md-1"></div>
 
         <div class="col-md">
-          <img src="img/thecubemockup@2x.png" class="img-fluid">
+          <img src="img/thecubemockup@2x.png" alt="The cube website mockup on computer screen" class="img-fluid">
           <div class="smspacer"></div>
           <p>UX Design</p>
           <h2>Dasher App Redesign</h2>
@@ -80,51 +82,91 @@
         </div>
       </div>
     </section>
-  </div>
+    <!--End Work Showcase-->
 
-  <script>
-    $(document).ready(function() {
-      $(document).on("scroll", onScroll);
+    <!--About Section-->
+    <section id="about">
+      <div class="section-intro">
+        <div class="line"></div>
+        <h2>A little bit about myself</h2>
+      </div>
+      <div class="row" id="about-row">
+        <div class="col-md-6">
+          <p class="textcomp">
+            I’m an <strong>driven</strong>, <strong>dedicated</strong>, <strong>team playing</strong> UX designer. Outside of my work, you may find me playing a round of golf, hitting the slopes on a snowboard, hopefully traveling somewhere amazing,
+            or eating sushi.
+            <br><br> I’m a firm believer that design should be done in the open allowing for early cross-collaboration. I also value user empathy, humility, learning from everyone, and designing with intentionality.
+            <br><br>
+            I am a senior at Michigan State University pursuing a <strong>BS in Experience Architecture</strong> and living in Grand Rapids. While at school, I've had many opportunities to gain real world UX design experience while developing my
+            skills as a team player and leader.
+            <br><br>
+            I will be spending this summer as a Digital Analytics Intern at <strong>Amway</strong> in Ada, Michigan.
+          </p>
+          <div class="line"></div>
+          <div class="social">
 
-      // Trigger Click to go specific section or add active
-      $('a[href^="#"]').on('click', function(e) {
-        e.preventDefault();
-        $(document).off("scroll");
+            <p><strong>Connect with me:</strong></p>
 
-        $('a').each(function() {
-          $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+            <div class="iconbar">
+            <ul>
+              <a href="https://medium.com/@ottesenjacob1994" class="hvr-icon-rotate" target="_blank"><i class="fa fa-linkedin icon hvr-icon"></i></a>
+              <a href="https://medium.com/@ottesenjacob1994" class="hvr-icon-rotate" target="_blank"><i class="fa fa-behance icon hvr-icon"></i></a>
+              <a href="https://medium.com/@ottesenjacob1994" class="hvr-icon-rotate" target="_blank"><i class="fa fa-twitter icon hvr-icon"></i></a>
+              <a href="https://medium.com/@ottesenjacob1994" class="hvr-icon-rotate" target="_blank"><i class="fa fa-instagram icon hvr-icon"></i></a>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="img/profile.jpeg" class="profileimg" alt="Profile image of Andrew Baker">
+        </div>
+      </div>
+    </section>
+    <!--End About Section-->
 
-        var target = this.hash;
-        $target = $(target);
+    <script>
+      $(document).ready(function() {
+        $(document).on("scroll", onScroll);
 
-        // Scrolling
-        $('html, body').stop().animate({
-          'scrollTop': $target.offset().top + 2
-        }, 500, 'swing', function() {
-          window.location.hash = target;
-          $(document).on("scroll", onScroll);
+        // Trigger Click to go specific section or add active
+        $('a[href^="#"]').on('click', function(e) {
+          e.preventDefault();
+          $(document).off("scroll");
+
+          $('a').each(function() {
+            $(this).removeClass('active');
+          })
+          $(this).addClass('active');
+
+          var target = this.hash;
+          $target = $(target);
+
+          // Scrolling
+          $('html, body').stop().animate({
+            'scrollTop': $target.offset().top + 2
+          }, 500, 'swing', function() {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+          });
         });
       });
-    });
 
-    function onScroll(event) {
-      var scrollPosition = $(document).scrollTop();
+      function onScroll(event) {
+        var scrollPosition = $(document).scrollTop();
 
-      // set your navigation a class name
-      $('nav a').each(function() {
-        var currentLink = $(this);
-        var refElement = $(currentLink.attr("href"));
-        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-          $('nav ul li a').removeClass("active");
-          currentLink.addClass("active");
-        } else {
-          currentLink.removeClass("active");
-        }
-      });
-    }
-  </script>
+        // set your navigation a class name
+        $('nav a').each(function() {
+          var currentLink = $(this);
+          var refElement = $(currentLink.attr("href"));
+          if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+            $('nav ul li a').removeClass("active");
+            currentLink.addClass("active");
+          } else {
+            currentLink.removeClass("active");
+          }
+        });
+      }
+    </script>
 
 </body>
 
