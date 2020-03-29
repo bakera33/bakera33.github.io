@@ -211,4 +211,20 @@ footer {
   padding-right: 20px;
 }
 
+@media only screen and (min-height: 768px) {
+  .section-intro {
+    position: relative;
+    top: 0;
+  }
+
+  #work {
+    height: 100vh;
+  }
+
+  #about {
+    height: 100vh;
+    margin-top: 20vh;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
