@@ -4,12 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Website</title>
+  <meta name="description" content="Andrew Baker UX Designer Portfolio">
+  <meta name="author" content="Andrew Baker">
+  <title>Andrew Baker - UX Designer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <link href="hover.css" rel="stylesheet" media="all">
   <link rel="stylesheet" href="main.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
 <body>
@@ -25,7 +27,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="mailto:bakera33@msu.edu"><i class="fa fa-envelope"></i></a>
+            <li><a href="mailto:bakera33@msu.edu" aria-label="Go to behance" class="hvr-icon-rotate"><i class="fa fa-envelope hvr-icon" aria-hidden="true"></i></a>
             <li>
           </ul>
         </nav>
@@ -40,7 +42,7 @@
         <div class="line"></div>
         <h1>I solve complex user problems with a human-centered design approach.</h1>
         <div class="buttons">
-          <a href="#work"><button aria-label="click to view work"class="cta hvr-grow">View my work</button></a>
+          <a href="#work"><button aria-label="click to view work" class="cta hvr-grow">View my work</button></a>
           <a href="img/ABaker-Resume.pdf" target="_blank"><button aria-label="click to view resume" class="cta2 hvr-grow">My Resume</button></a>
         </div>
       </div>
@@ -57,12 +59,10 @@
         <div class="col-md">
           <img src="img/thecubemockup@2x.png" alt="The cube website mockup on computer screen" class="img-fluid">
           <div class="smspacer"></div>
-          <p>Product Design</p>
+          <p class="meta">Product Design</p>
           <h3>The Cube</h3>
           <p>Led a team in a redesign and rebrand of The Cube website.</p>
-          <a href="workfront_takeaways.html" class="button1">
-            <button type="button" name="button">View Project</button>
-          </a>
+          <a href="#"><button type="button" name="button" class="button1">View Project</button></a>
           <div class="smspacer"></div>
           <div class="smspacer"></div>
         </div>
@@ -72,11 +72,11 @@
         <div class="col-md">
           <img src="img/thecubemockup@2x.png" alt="The cube website mockup on computer screen" class="img-fluid">
           <div class="smspacer"></div>
-          <p>UX Design</p>
+          <p class="meta">UX Design</p>
           <h3>Dasher App Redesign</h3>
           <p>Redesigning the DoorDash driver app to create an efficient and seamless delivery experience.</p>
-          <a href="workfront_takeaways.html" class="button1">
-            <button type="button" name="button">View Project</button>
+          <a href="#">
+            <button type="button" name="button" class="button1">View Project</button>
           </a>
           <div class="smspacer"></div>
         </div>
@@ -86,7 +86,7 @@
 
     <!--About Section-->
     <section id="about">
-      <div class="section-intro">
+      <div class="section-intro" id="about-intro">
         <div class="line"></div>
         <h2>A little bit about myself</h2>
       </div>
@@ -108,65 +108,72 @@
             <p><strong>Connect with me:</strong></p>
 
             <div class="iconbar">
-            <ul>
-              <a href="https://www.linkedin.com/in/andrewbaker33/" class="hvr-icon-rotate" target="_blank"><i class="fa fa-linkedin icon hvr-icon"></i></a>
-              <a href="https://www.behance.net/andrewbaker1" class="hvr-icon-rotate" target="_blank"><i class="fa fa-behance icon hvr-icon"></i></a>
-              <a href="https://twitter.com/andrrewbaker" class="hvr-icon-rotate" target="_blank"><i class="fa fa-twitter icon hvr-icon"></i></a>
-              <a href="https://www.instagram.com/andr3wbak3r/" class="hvr-icon-rotate" target="_blank"><i class="fa fa-instagram icon hvr-icon"></i></a>
-            </ul>
+              <ul>
+                <a href="https://www.linkedin.com/in/andrewbaker33/" aria-label="Go to linkedin" class="hvr-icon-rotate" target="_blank"><i aria-hidden="true" class="fa fa-linkedin icon hvr-icon"></i></a>
+                <a href="https://www.behance.net/andrewbaker1" aria-label="Go to behance" class="hvr-icon-rotate" target="_blank"><i aria-hidden="true" class="fa fa-behance icon hvr-icon"></i></a>
+                <a href="https://twitter.com/andrrewbaker" aria-label="Go to twitter" class="hvr-icon-rotate" target="_blank"><i aria-hidden="true" class="fa fa-twitter icon hvr-icon"></i></a>
+                <a href="https://www.instagram.com/andr3wbak3r/" aria-label="Go to instagram" class="hvr-icon-rotate" target="_blank"><i aria-hidden="true" class="fa fa-instagram icon hvr-icon"></i></a>
+              </ul>
             </div>
           </div>
         </div>
         <div class="col-md-6">
           <img src="img/profile.jpeg" class="profileimg" alt="Profile image of Andrew Baker">
+           <figcaption>Me in Puerto Veras, Chile 2020.</figcaption>
         </div>
       </div>
     </section>
+
+    <footer>
+      <p>&copy; 2020. Design and developed by Andrew Baker<p>
+    </footer>
+
     <!--End About Section-->
+  </div>
 
-    <script>
-      $(document).ready(function() {
-        $(document).on("scroll", onScroll);
+  <script>
+    $(document).ready(function() {
+      $(document).on("scroll", onScroll);
 
-        // Trigger Click to go specific section or add active
-        $('a[href^="#"]').on('click', function(e) {
-          e.preventDefault();
-          $(document).off("scroll");
+      // Trigger Click to go specific section or add active
+      $('a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
 
-          $('a').each(function() {
-            $(this).removeClass('active');
-          })
-          $(this).addClass('active');
+        $('a').each(function() {
+          $(this).removeClass('active');
+        })
+        $(this).addClass('active');
 
-          var target = this.hash;
-          $target = $(target);
+        var target = this.hash;
+        $target = $(target);
 
-          // Scrolling
-          $('html, body').stop().animate({
-            'scrollTop': $target.offset().top + 2
-          }, 500, 'swing', function() {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-          });
+        // Scrolling
+        $('html, body').stop().animate({
+          'scrollTop': $target.offset().top + 2
+        }, 500, 'swing', function() {
+          window.location.hash = target;
+          $(document).on("scroll", onScroll);
         });
       });
+    });
 
-      function onScroll(event) {
-        var scrollPosition = $(document).scrollTop();
+    function onScroll(event) {
+      var scrollPosition = $(document).scrollTop();
 
-        // set your navigation a class name
-        $('nav a').each(function() {
-          var currentLink = $(this);
-          var refElement = $(currentLink.attr("href"));
-          if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-            $('nav ul li a').removeClass("active");
-            currentLink.addClass("active");
-          } else {
-            currentLink.removeClass("active");
-          }
-        });
-      }
-    </script>
+      // set your navigation a class name
+      $('nav a').each(function() {
+        var currentLink = $(this);
+        var refElement = $(currentLink.attr("href"));
+        if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+          $('nav ul li a').removeClass("active");
+          currentLink.addClass("active");
+        } else {
+          currentLink.removeClass("active");
+        }
+      });
+    }
+  </script>
 
 </body>
 

@@ -6,7 +6,8 @@
   padding: 0;
 }
 
-body, html {
+body,
+html {
   font-family: "Montserrat";
   position: relative;
 }
@@ -26,12 +27,17 @@ h2 {
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 800;
   font-size: 1.3em;
 }
 
 p {
   font-weight: 300;
+}
+
+.meta {
+  font-size: 0.8em;
+  letter-spacing: 2px;
 }
 
 ul {
@@ -163,16 +169,23 @@ button {
   padding-top: 8vh;
 }
 
+.button1 {
+  border: 2px solid #0018CE;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 9px 16px;
+}
+
 #about {
-  height: 100vh;
+  height: auto;
+}
+
+#about-intro {
+  padding-top: 7vh;
 }
 
 .smspacer {
   padding-top: 2em;
-}
-
-.row {
-  margin-top: 100px;
 }
 
 .profileimg {
@@ -180,12 +193,17 @@ button {
   height: auto;
 }
 
-#footer {
-  height: auto;
+figcaption {
   text-align: center;
-  display: block;
-  position: absolute;
-  bottom: 0;
+  font-weight: 300;
+  font-size: 0.8em;
+  padding: 1em 0;
+}
+
+footer {
+  padding-top: 4em;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 .icon {
