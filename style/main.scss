@@ -1,15 +1,21 @@
 /*font*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap');
+$primary: #0018CE;
+$secondary: #fff;
+$break-med: 900px;
+$break-sml: 440px;
+$font-body: 'CeraPro', 'Montserrat';
 @font-face {
-  font-family: "CeraPro";
+  font-family: 'CeraPro';
   src: url("fonts/CeraPro-light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "CeraPro";
+  font-family: 'CeraPro';
   src: url("fonts/CeraPro-Medium.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,11 +49,11 @@ h3 {
 
 p {
   font-weight: 300;
-  font-family: "CeraPro", "Montserrat";
+  font-family: $font-body;
 }
 
-strong {
-  font-weight: bold;
+span{
+  color: $primary;
 }
 
 .meta {
@@ -98,17 +104,19 @@ header {
 
 ul {
   display: flex;
-}
-ul li a {
-  padding: 0 0.6em;
-  font-weight: 300;
-}
-ul .active {
-  font-weight: 500;
-}
-@media only screen and (min-width: 768px) {
-  ul li a {
-    padding: 0 2em;
+
+  li a {
+    padding: 0 0.6em;
+    font-weight: 300;
+  }
+
+  .active {
+    font-weight: 500;
+  }
+  @media only screen and (min-width: 768px) {
+    li a {
+      padding: 0 2em;
+    }
   }
 }
 
@@ -131,7 +139,7 @@ li a:nth-last-child {
 .line {
   width: 60px;
   height: 2px;
-  border-bottom: 4px solid #0018CE;
+  border-bottom: 4px solid $primary;
   margin: 1.5em 0;
 }
 
@@ -140,22 +148,21 @@ h1 {
   margin: 0 0 0.75em;
   padding: 0;
 }
-
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 2em;
   }
 }
+
 button {
   margin-top: 0;
   font-size: 1em;
   font-weight: 800;
   padding: 18px 32px;
   border-radius: 100px;
-  border: 1px solid #0018CE;
+  border: 1px solid $primary;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 768px) {
   button {
     padding: 18px 64px;
@@ -163,14 +170,15 @@ button {
     margin-bottom: 9px;
   }
 }
+
 .cta {
-  background-color: #0018CE;
-  color: #fff;
+  background-color: $primary;
+  color: $secondary;
   margin-right: 10px;
 }
 
 .cta2 {
-  border: 1px solid #0018CE;
+  border: 1px solid $primary;
   background-color: transparent;
 }
 
@@ -185,7 +193,7 @@ button {
 }
 
 .button1 {
-  border: 2px solid #0018CE;
+  border: 2px solid $primary;
   border-radius: 0;
   background-color: transparent;
   padding: 9px 16px;
@@ -225,7 +233,6 @@ footer {
   font-size: 1.5em;
   padding-right: 20px;
 }
-
 @media only screen and (min-height: 768px) {
   .section-intro {
     position: relative;
@@ -241,5 +248,3 @@ footer {
     margin-top: 20vh;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
