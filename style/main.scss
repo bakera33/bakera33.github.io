@@ -248,3 +248,16 @@ footer {
     margin-top: 20vh;
   }
 }
+
+@media only screen and (max-width: 375px){
+  .hero-content{
+    padding-top: 7vh;
+  }
+  #about{
+    height: 100%;
+  }
+
+  #work{
+    height: auto;
+  }
+}
