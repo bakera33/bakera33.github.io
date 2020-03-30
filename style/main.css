@@ -254,5 +254,14 @@ footer {
     height: auto;
   }
 }
+@media only screen and (max-width: 320px) {
+  .hero-content {
+    padding-top: 10vh;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
