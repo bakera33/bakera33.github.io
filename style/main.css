@@ -14,6 +14,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #353535;
 }
 
 body,
@@ -52,7 +53,7 @@ span {
 
 .meta {
   font-size: 0.8em;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 ul {
@@ -262,6 +263,60 @@ footer {
   h1 {
     font-size: 1.5em;
   }
+}
+.work {
+  max-width: 80%;
+  padding-top: 20vh;
+  padding-bottom: 2em;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .work {
+    max-width: 100%;
+  }
+}
+.work ul {
+  list-style-type: circle;
+  display: block;
+}
+
+hr {
+  width: 100%;
+  background-color: #b4b4b4;
+  height: 1.5px;
+  border: none;
+  margin: 40px 0;
+}
+
+.work li {
+  margin-bottom: 0.625rem;
+  margin-left: 2.5rem;
+  line-height: 1.5;
+}
+
+.work p {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.xd-link {
+  color: blue !important;
+}
+
+.work img {
+  width: 100%;
+  padding-bottom: 1.2rem;
+}
+
+.hifi {
+  border: 0.5px solid #555555;
+  overflow: hidden;
+}
+
+.b2t {
+  margin-top: 50px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

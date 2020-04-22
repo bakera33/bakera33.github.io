@@ -1,6 +1,7 @@
 /*font*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap');
 $primary: #0018CE;
+$body: #353535;
 $secondary: #fff;
 $break-med: 900px;
 $break-sml: 440px;
@@ -20,6 +21,7 @@ $font-body: 'CeraPro', 'Montserrat';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: $body;
 }
 
 body,
@@ -52,13 +54,13 @@ p {
   font-family: $font-body;
 }
 
-span{
+span {
   color: $primary;
 }
 
 .meta {
   font-size: 0.8em;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 ul {
@@ -248,26 +250,81 @@ footer {
     margin-top: 20vh;
   }
 }
-
-@media only screen and (max-width: 375px){
-  .hero-content{
+@media only screen and (max-width: 375px) {
+  .hero-content {
     padding-top: 7vh;
   }
-  #about{
+
+  #about {
     height: 100%;
   }
 
-  #work{
+  #work {
     height: auto;
   }
 }
-
-@media only screen and (max-width: 320px){
-
-  .hero-content{
+@media only screen and (max-width: 320px) {
+  .hero-content {
     padding-top: 10vh;
   }
-  h1{
+
+  h1 {
     font-size: 1.5em;
   }
+}
+
+.work {
+  max-width: 80%;
+  padding-top: 20vh;
+  padding-bottom: 2em;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px){
+  .work{
+    max-width: 100%;
+  }
+}
+
+.work ul {
+  list-style-type: circle;
+  display: block;
+}
+
+hr {
+  width: 100%;
+  background-color: #b4b4b4;
+  height: 1.5px;
+  border: none;
+  margin: 40px 0;
+}
+
+.work li {
+  margin-bottom: 0.625rem;
+  margin-left: 2.5rem;
+  line-height: 1.5;
+}
+
+.work p {
+  line-height: 2;
+  font-size: 16px;
+}
+
+.xd-link {
+  color: blue !important;
+}
+
+.work img {
+  width: 100%;
+  padding-bottom: 1.2rem;
+}
+
+.hifi {
+  border: 0.5px solid #555555;
+  overflow: hidden;
+}
+
+.b2t{
+  margin-top: 50px;
+  text-align: center;
 }
