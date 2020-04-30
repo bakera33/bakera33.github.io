@@ -1,20 +1,27 @@
 /*font*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap');
-$primary: #0018CE;
+$primary: #172A55;
 $body: #353535;
 $secondary: #fff;
 $break-med: 900px;
 $break-sml: 440px;
-$font-body: 'CeraPro', 'Montserrat';
 @font-face {
-  font-family: 'CeraPro';
-  src: url("fonts/CeraPro-light.ttf") format("truetype");
+  font-family: 'Suisse';
+  src: url("/fonts/SuisseIntl-Bold-WebS.woff") format('woff');
+  font-weight: 700;
 }
 @font-face {
-  font-family: 'CeraPro';
-  src: url("fonts/CeraPro-Medium.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Suisse';
+  src: url("/fonts/SuisseIntl-SemiBold-WebS.woff") format('woff');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Suisse';
+  src: url("/fonts/SuisseIntl-Medium-WebS.woff") format('woff');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url("/fonts/TiemposFineWeb-Regular.woff") format('woff');
 }
 
 * {
@@ -26,8 +33,14 @@ $font-body: 'CeraPro', 'Montserrat';
 
 body,
 html {
-  font-family: "Montserrat";
+  font-family: 'Suisse';
+  font-weight: 500;
   position: relative;
+  background-image: url('/img/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
 a {
@@ -37,25 +50,28 @@ a {
 
 h1 {
   font-weight: 800;
+  letter-spacing: -0.4px;
 }
 
 h2 {
-  font-weight: 800;
+  font-weight: 700;
   padding-bottom: 1.5em;
 }
 
 h3 {
-  font-weight: 800;
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -0.6px;
 }
 
 p {
-  font-weight: 300;
-  font-family: $font-body;
+  opacity: 0.7;
 }
 
 span {
-  color: $primary;
+  color: $body;
+  font-weight: 700;
+  opacity: 1 !important;
 }
 
 .meta {
@@ -93,11 +109,10 @@ section {
   z-index: 20;
   padding-right: 1.5em;
 }
-
+/*-------------------Navigation-------------------------*/
 header {
   display: flex;
   justify-content: space-between;
-  background: white;
 }
 
 .logo {
@@ -110,10 +125,16 @@ ul {
   li a {
     padding: 0 0.6em;
     font-weight: 300;
+    opacity: 0.5;
+  }
+
+  .email {
+    opacity: 1;
   }
 
   .active {
-    font-weight: 500;
+    opacity: 1;
+    color: $primary;
   }
   @media only screen and (min-width: 768px) {
     li a {
@@ -125,7 +146,8 @@ ul {
 li a:nth-last-child {
   padding-right: 0;
 }
-
+/*-------------------End Navigation-------------------------*/
+/*-------------------Hero Section-------------------------*/
 .hero-content {
   max-width: 700px;
   position: relative;
@@ -134,8 +156,8 @@ li a:nth-last-child {
 }
 
 .intro {
-  font-weight: 300;
   font-size: 1.1em;
+
 }
 
 .line {
@@ -145,7 +167,7 @@ li a:nth-last-child {
   margin: 1.5em 0;
 }
 
-h1 {
+.h1hero {
   font-size: 2.5em;
   margin: 0 0 0.75em;
   padding: 0;
@@ -160,15 +182,21 @@ button {
   margin-top: 0;
   font-size: 1em;
   font-weight: 800;
-  padding: 18px 32px;
-  border-radius: 100px;
+  padding: 16px 30px;
   border: 1px solid $primary;
   cursor: pointer;
+}
+
+button::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.16);
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
 }
 @media only screen and (max-width: 768px) {
   button {
     padding: 18px 64px;
-    border-radius: 11px;
     margin-bottom: 9px;
   }
 }
@@ -181,9 +209,9 @@ button {
 
 .cta2 {
   border: 1px solid $primary;
-  background-color: transparent;
 }
-
+/*-------------------End Hero Section-------------------------*/
+/*-------------------Work Section----------------------->*/
 .section-intro {
   position: relative;
   top: 15%;
@@ -200,13 +228,18 @@ button {
   background-color: transparent;
   padding: 9px 16px;
 }
-
+/*-------------------End Work Section----------------------->*/
+/*-------------------About Section----------------------->*/
 #about {
   height: auto;
 }
 
 #about-intro {
   padding-top: 7vh;
+}
+
+.textcomp{
+  font-family: "Tiempos Text", serif;
 }
 
 .smspacer {
@@ -223,6 +256,7 @@ figcaption {
   font-weight: 300;
   font-size: 0.8em;
   padding: 1em 0;
+  opacity: 0.75;
 }
 
 footer {
@@ -235,6 +269,7 @@ footer {
   font-size: 1.5em;
   padding-right: 20px;
 }
+/*-------------------End About Section----------------------->*/
 @media only screen and (min-height: 768px) {
   .section-intro {
     position: relative;
@@ -280,10 +315,21 @@ footer {
   margin: auto;
 }
 
-@media only screen and (max-width: 768px){
-  .work{
+@media only screen and (max-width: 768px) {
+  .work {
     max-width: 100%;
   }
+}
+
+.content-paragraph{
+  font-family: 'Tiempos Text', serif;
+  font-size: 1.188em !important;
+  line-height: 2.25em !important;
+  opacity: 0.75 !important;
+}
+
+.work-headings{
+  margin: 1.4em 0 .5em 0;
 }
 
 .work ul {
@@ -305,11 +351,6 @@ hr {
   line-height: 1.5;
 }
 
-.work p {
-  line-height: 2;
-  font-size: 16px;
-}
-
 .xd-link {
   color: blue !important;
 }
@@ -320,11 +361,12 @@ hr {
 }
 
 .hifi {
-  border: 0.5px solid #555555;
+  -webkit-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
+box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
   overflow: hidden;
 }
 
-.b2t{
+.b2t {
   margin-top: 50px;
   text-align: center;
 }

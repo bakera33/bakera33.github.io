@@ -1,14 +1,22 @@
 /*font*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,800&display=swap");
 @font-face {
-  font-family: "CeraPro";
-  src: url("fonts/CeraPro-light.ttf") format("truetype");
+  font-family: "Suisse";
+  src: url("/fonts/SuisseIntl-Bold-WebS.woff") format("woff");
+  font-weight: 700;
 }
 @font-face {
-  font-family: "CeraPro";
-  src: url("fonts/CeraPro-Medium.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
+  font-family: "Suisse";
+  src: url("/fonts/SuisseIntl-SemiBold-WebS.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Suisse";
+  src: url("/fonts/SuisseIntl-Medium-WebS.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Tiempos Text";
+  src: url("/fonts/TiemposFineWeb-Regular.woff") format("woff");
 }
 * {
   box-sizing: border-box;
@@ -19,8 +27,14 @@
 
 body,
 html {
-  font-family: "Montserrat";
+  font-family: "Suisse";
+  font-weight: 500;
   position: relative;
+  background-image: url("/img/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
 }
 
 a {
@@ -30,25 +44,28 @@ a {
 
 h1 {
   font-weight: 800;
+  letter-spacing: -0.4px;
 }
 
 h2 {
-  font-weight: 800;
+  font-weight: 700;
   padding-bottom: 1.5em;
 }
 
 h3 {
-  font-weight: 800;
-  font-size: 1.3em;
+  font-weight: 700;
+  font-size: 2em;
+  letter-spacing: -0.6px;
 }
 
 p {
-  font-weight: 300;
-  font-family: "CeraPro", "Montserrat";
+  opacity: 0.7;
 }
 
 span {
-  color: #0018CE;
+  color: #353535;
+  font-weight: 700;
+  opacity: 1 !important;
 }
 
 .meta {
@@ -87,10 +104,10 @@ section {
   padding-right: 1.5em;
 }
 
+/*-------------------Navigation-------------------------*/
 header {
   display: flex;
   justify-content: space-between;
-  background: white;
 }
 
 .logo {
@@ -103,9 +120,14 @@ ul {
 ul li a {
   padding: 0 0.6em;
   font-weight: 300;
+  opacity: 0.5;
+}
+ul .email {
+  opacity: 1;
 }
 ul .active {
-  font-weight: 500;
+  opacity: 1;
+  color: #172A55;
 }
 @media only screen and (min-width: 768px) {
   ul li a {
@@ -117,6 +139,8 @@ li a:nth-last-child {
   padding-right: 0;
 }
 
+/*-------------------End Navigation-------------------------*/
+/*-------------------Hero Section-------------------------*/
 .hero-content {
   max-width: 700px;
   position: relative;
@@ -125,18 +149,17 @@ li a:nth-last-child {
 }
 
 .intro {
-  font-weight: 300;
   font-size: 1.1em;
 }
 
 .line {
   width: 60px;
   height: 2px;
-  border-bottom: 4px solid #0018CE;
+  border-bottom: 4px solid #172A55;
   margin: 1.5em 0;
 }
 
-h1 {
+.h1hero {
   font-size: 2.5em;
   margin: 0 0 0.75em;
   padding: 0;
@@ -151,30 +174,37 @@ button {
   margin-top: 0;
   font-size: 1em;
   font-weight: 800;
-  padding: 18px 32px;
-  border-radius: 100px;
-  border: 1px solid #0018CE;
+  padding: 16px 30px;
+  border: 1px solid #172A55;
   cursor: pointer;
+}
+
+button::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.16);
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
 }
 
 @media only screen and (max-width: 768px) {
   button {
     padding: 18px 64px;
-    border-radius: 11px;
     margin-bottom: 9px;
   }
 }
 .cta {
-  background-color: #0018CE;
+  background-color: #172A55;
   color: #fff;
   margin-right: 10px;
 }
 
 .cta2 {
-  border: 1px solid #0018CE;
-  background-color: transparent;
+  border: 1px solid #172A55;
 }
 
+/*-------------------End Hero Section-------------------------*/
+/*-------------------Work Section----------------------->*/
 .section-intro {
   position: relative;
   top: 15%;
@@ -186,18 +216,24 @@ button {
 }
 
 .button1 {
-  border: 2px solid #0018CE;
+  border: 2px solid #172A55;
   border-radius: 0;
   background-color: transparent;
   padding: 9px 16px;
 }
 
+/*-------------------End Work Section----------------------->*/
+/*-------------------About Section----------------------->*/
 #about {
   height: auto;
 }
 
 #about-intro {
   padding-top: 7vh;
+}
+
+.textcomp {
+  font-family: "Tiempos Text", serif;
 }
 
 .smspacer {
@@ -214,6 +250,7 @@ figcaption {
   font-weight: 300;
   font-size: 0.8em;
   padding: 1em 0;
+  opacity: 0.75;
 }
 
 footer {
@@ -227,6 +264,7 @@ footer {
   padding-right: 20px;
 }
 
+/*-------------------End About Section----------------------->*/
 @media only screen and (min-height: 768px) {
   .section-intro {
     position: relative;
@@ -276,6 +314,17 @@ footer {
     max-width: 100%;
   }
 }
+.content-paragraph {
+  font-family: "Tiempos Text", serif;
+  font-size: 1.188em !important;
+  line-height: 2.25em !important;
+  opacity: 0.75 !important;
+}
+
+.work-headings {
+  margin: 1.4em 0 0.5em 0;
+}
+
 .work ul {
   list-style-type: circle;
   display: block;
@@ -295,11 +344,6 @@ hr {
   line-height: 1.5;
 }
 
-.work p {
-  line-height: 2;
-  font-size: 16px;
-}
-
 .xd-link {
   color: blue !important;
 }
@@ -310,7 +354,8 @@ hr {
 }
 
 .hifi {
-  border: 0.5px solid #555555;
+  -webkit-box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.16);
   overflow: hidden;
 }
 
