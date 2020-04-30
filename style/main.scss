@@ -1,5 +1,5 @@
 /*font*/
-$primary: #172A55;
+$primary: #05386B;
 $body: #353535;
 $secondary: #fff;
 $break-med: 900px;
@@ -36,13 +36,19 @@ html {
   font-family: 'Suisse';
   font-weight: 500;
   position: relative;
+  /*
   background-image: url('/img/background.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
+  */
 }
 
+::selection{
+  color: #fff;
+  background-color: $primary;
+}
 
 a {
   text-decoration: none !important;
@@ -326,8 +332,8 @@ footer {
 .content-paragraph{
   font-family: 'Tiempos Text', serif;
   font-size: 1.188em !important;
-  line-height: 2.25em !important;
-  opacity: 0.75 !important;
+  line-height: 36px !important;
+  opacity: 0.9 !important;
 }
 
 .work-headings{

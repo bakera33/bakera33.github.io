@@ -30,11 +30,18 @@ html {
   font-family: "Suisse";
   font-weight: 500;
   position: relative;
-  background-image: url("/img/background.svg");
+  /*
+  background-image: url('/img/background.svg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
+  */
+}
+
+::selection {
+  color: #fff;
+  background-color: #05386B;
 }
 
 a {
@@ -127,7 +134,7 @@ ul .email {
 }
 ul .active {
   opacity: 1;
-  color: #172A55;
+  color: #05386B;
 }
 @media only screen and (min-width: 768px) {
   ul li a {
@@ -155,7 +162,7 @@ li a:nth-last-child {
 .line {
   width: 60px;
   height: 2px;
-  border-bottom: 4px solid #172A55;
+  border-bottom: 4px solid #05386B;
   margin: 1.5em 0;
 }
 
@@ -175,7 +182,7 @@ button {
   font-size: 1em;
   font-weight: 800;
   padding: 16px 30px;
-  border: 1px solid #172A55;
+  border: 1px solid #05386B;
   cursor: pointer;
 }
 
@@ -194,13 +201,13 @@ button::before {
   }
 }
 .cta {
-  background-color: #172A55;
+  background-color: #05386B;
   color: #fff;
   margin-right: 10px;
 }
 
 .cta2 {
-  border: 1px solid #172A55;
+  border: 1px solid #05386B;
   background-color: #fff;
 }
 
@@ -217,7 +224,7 @@ button::before {
 }
 
 .button1 {
-  border: 2px solid #172A55;
+  border: 2px solid #05386B;
   border-radius: 0;
   background-color: transparent;
   padding: 9px 16px;
@@ -318,8 +325,8 @@ footer {
 .content-paragraph {
   font-family: "Tiempos Text", serif;
   font-size: 1.188em !important;
-  line-height: 2.25em !important;
-  opacity: 0.75 !important;
+  line-height: 36px !important;
+  opacity: 0.9 !important;
 }
 
 .work-headings {
