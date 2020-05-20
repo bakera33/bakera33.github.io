@@ -41,7 +41,7 @@ html {
 
 ::selection {
   color: #fff;
-  background-color: #05386B;
+  background-color: #024aa3;
 }
 
 a {
@@ -66,13 +66,18 @@ h3 {
 }
 
 p {
-  opacity: 0.83;
+  opacity: 0.95;
+  font-family: "Tiempos Text", sans-serif;
 }
 
 span {
   color: #353535;
   font-weight: 700;
   opacity: 1 !important;
+}
+
+i {
+  color: #024aa3;
 }
 
 .meta {
@@ -134,14 +139,14 @@ ul .email {
 }
 ul .active {
   opacity: 1;
-  color: #05386B;
-}
-@media only screen and (min-width: 768px) {
-  ul li a {
-    padding: 0 2em;
-  }
+  color: #024aa3;
 }
 
+@media only screen and (max-width: 768px) {
+  ul li a {
+    padding: 0 1em;
+  }
+}
 li a:nth-last-child {
   padding-right: 0;
 }
@@ -162,7 +167,7 @@ li a:nth-last-child {
 .line {
   width: 60px;
   height: 2px;
-  border-bottom: 4px solid #05386B;
+  border-bottom: 4px solid #024aa3;
   margin: 1.5em 0;
 }
 
@@ -174,7 +179,11 @@ li a:nth-last-child {
 
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+
+  body {
+    font-size: 0.9em;
   }
 }
 button {
@@ -182,7 +191,7 @@ button {
   font-size: 1em;
   font-weight: 800;
   padding: 16px 30px;
-  border: 1px solid #05386B;
+  border: 1px solid #024aa3;
   cursor: pointer;
 }
 
@@ -201,13 +210,13 @@ button::before {
   }
 }
 .cta {
-  background-color: #05386B;
+  background-color: #024aa3;
   color: #fff;
   margin-right: 10px;
 }
 
 .cta2 {
-  border: 1px solid #05386B;
+  border: 1px solid #024aa3;
   background-color: #fff;
 }
 
@@ -224,7 +233,7 @@ button::before {
 }
 
 .button1 {
-  border: 2px solid #05386B;
+  border: 2px solid #024aa3;
   border-radius: 0;
   background-color: transparent;
   padding: 9px 16px;
@@ -246,6 +255,10 @@ button::before {
 
 .smspacer {
   padding-top: 2em;
+}
+
+#XA-link {
+  color: #024aa3;
 }
 
 .profileimg {

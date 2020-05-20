@@ -1,9 +1,10 @@
 /*font*/
-$primary: #05386B;
+$primary: #024aa3;
 $body: #353535;
 $secondary: #fff;
 $break-med: 900px;
 $break-sml: 440px;
+
 @font-face {
   font-family: 'Suisse';
   src: url("/fonts/SuisseIntl-Bold-WebS.woff") format('woff');
@@ -72,13 +73,18 @@ h3 {
 }
 
 p {
-  opacity: 0.83;
+  opacity: .95;
+  font-family: "Tiempos Text", sans-serif;
 }
 
 span {
   color: $body;
   font-weight: 700;
   opacity: 1 !important;
+}
+
+i{
+  color: $primary;
 }
 
 .meta {
@@ -143,10 +149,12 @@ ul {
     opacity: 1;
     color: $primary;
   }
-  @media only screen and (min-width: 768px) {
-    li a {
-      padding: 0 2em;
-    }
+
+}
+
+@media only screen and (max-width: 768px) {
+  ul li a {
+    padding: 0 1em;
   }
 }
 
@@ -181,7 +189,11 @@ li a:nth-last-child {
 }
 @media only screen and (max-width: 768px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.5em;
+  }
+  body{
+    font-size: .9em;
+
   }
 }
 
@@ -252,6 +264,10 @@ button::before {
 
 .smspacer {
   padding-top: 2em;
+}
+
+#XA-link{
+  color: $primary;
 }
 
 .profileimg {
@@ -378,8 +394,6 @@ box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
   margin-top: 50px;
   text-align: center;
 }
-
-
 
 .project1{
   background-image: none;
