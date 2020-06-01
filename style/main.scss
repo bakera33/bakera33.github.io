@@ -18,6 +18,8 @@ $mq-xlarge: "(min-width: #{$bp-xlarge})";
 $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
+$base-font-size: 1em;
+
 
 @font-face {
   font-family: 'Suisse';
@@ -166,7 +168,7 @@ li a:nth-last-child {
   padding-right: 0;
 }
 
-@media {$mq-small} {
+@media ($mq-small) {
   ul li a {
     padding: 0 1em;
   }

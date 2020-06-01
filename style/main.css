@@ -1,4 +1,3 @@
-/*font*/
 @font-face {
   font-family: "Suisse";
   src: url("/fonts/SuisseIntl-Bold-WebS.woff") format("woff");
@@ -30,13 +29,12 @@ html {
   font-family: "Suisse";
   font-weight: 500;
   position: relative;
-  /*
-  background-image: url('/img/background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  */
+}
+@media (min-width: 160em) {
+  body,
+html {
+    font-size: 1.6em;
+  }
 }
 
 ::selection {
@@ -142,15 +140,15 @@ ul .active {
   color: #024aa3;
 }
 
-@media only screen and (max-width: 768px) {
-  ul li a {
-    padding: 0 1em;
-  }
-}
 li a:nth-last-child {
   padding-right: 0;
 }
 
+@media ((min-width: 48em)) {
+  ul li a {
+    padding: 0 1em;
+  }
+}
 /*-------------------End Navigation-------------------------*/
 /*-------------------Hero Section-------------------------*/
 .hero-content {
