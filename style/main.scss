@@ -53,10 +53,6 @@ html {
   font-family: 'Suisse';
   font-weight: 500;
   position: relative;
-
-  @media #{$mq-xxlarge} {
-    font-size: $base-font-size*1.6;
-  }
 }
 
 ::selection{

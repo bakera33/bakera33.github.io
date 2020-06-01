@@ -30,12 +30,6 @@ html {
   font-weight: 500;
   position: relative;
 }
-@media (min-width: 160em) {
-  body,
-html {
-    font-size: 1.6em;
-  }
-}
 
 ::selection {
   color: #fff;
