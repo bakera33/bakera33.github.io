@@ -1,9 +1,23 @@
-/*font*/
+//colors
 $primary: #024aa3;
 $body: #353535;
 $secondary: #fff;
-$break-med: 900px;
-$break-sml: 440px;
+
+//breakpoints
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+$mq-xlarge: "(min-width: #{$bp-xlarge})";
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
 
 @font-face {
   font-family: 'Suisse';
@@ -37,13 +51,10 @@ html {
   font-family: 'Suisse';
   font-weight: 500;
   position: relative;
-  /*
-  background-image: url('/img/background.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  */
+
+  @media #{$mq-xxlarge} {
+    font-size: $base-font-size*1.6;
+  }
 }
 
 ::selection{
@@ -149,18 +160,18 @@ ul {
     opacity: 1;
     color: $primary;
   }
-
-}
-
-@media only screen and (max-width: 768px) {
-  ul li a {
-    padding: 0 1em;
-  }
 }
 
 li a:nth-last-child {
   padding-right: 0;
 }
+
+@media {$mq-small} {
+  ul li a {
+    padding: 0 1em;
+  }
+}
+
 /*-------------------End Navigation-------------------------*/
 /*-------------------Hero Section-------------------------*/
 .hero-content {
