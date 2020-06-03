@@ -29,6 +29,7 @@ html {
   font-family: "Suisse";
   font-weight: 500;
   position: relative;
+  background-color: #f2f2f2;
 }
 
 ::selection {
