@@ -2,14 +2,12 @@
 $primary: #024aa3;
 $body: #353535;
 $secondary: #f2f2f2;
-
 //breakpoints
 $bp-small: 48em; // 768px
 $bp-medium: 64em; // 1024px
 $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
-
 // Media Queries
 $mq-small: "(min-width: #{$bp-small})";
 $mq-medium: "(min-width: #{$bp-medium})";
@@ -17,10 +15,7 @@ $mq-large: "(min-width: #{$bp-large})";
 $mq-xlarge: "(min-width: #{$bp-xlarge})";
 $mq-xxlarge: "(min-width: #{$bp-xxlarge})";
 $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
-
 $base-font-size: 1em;
-
-
 @font-face {
   font-family: 'Suisse';
   src: url("/fonts/SuisseIntl-Bold-WebS.woff") format('woff');
@@ -54,13 +49,12 @@ html {
   font-weight: 500;
   position: relative;
   background-color: $secondary;
-
   @media #{$mq-xxlarge} {
     font-size: $base-font-size*1.1;
   }
 }
 
-::selection{
+::selection {
   color: #fff;
   background-color: $primary;
 }
@@ -87,7 +81,7 @@ h3 {
 }
 
 p {
-  opacity: .95;
+  opacity: 0.95;
   font-family: "Tiempos Text", sans-serif;
 }
 
@@ -97,12 +91,12 @@ span {
   opacity: 1 !important;
 }
 
-i{
+i {
   color: $primary;
-  padding-right: .7em;
+  padding-right: 0.7em;
 }
 
-.briefcase{
+.briefcase {
   color: $secondary;
 }
 
@@ -123,12 +117,13 @@ ul {
   margin: 0 auto;
   position: relative;
 }
-
 @media #{$mq-xxlarge} {
-  .wrapper, .container{
+  .container,
+  .wrapper {
     max-width: 1500px !important;
   }
-  .hero-content{
+
+  .hero-content {
     max-width: 1200px !important;
   }
 }
@@ -146,12 +141,9 @@ section {
   position: fixed;
   padding: 1.5em 0;
   background-color: $secondary;
-  opacity: 0.9;
   z-index: 20;
   padding-right: 1.5em;
 }
-
-
 /*-------------------Navigation-------------------------*/
 header {
   display: flex;
@@ -167,12 +159,12 @@ ul {
 
   li a {
     padding: 0 2em;
-    font-weight: 300;
-    opacity: 0.7;
+    opacity: 0.6;
   }
 
   .email {
     opacity: 1;
+    padding-right: 0;
   }
 
   .active {
@@ -182,16 +174,14 @@ ul {
   }
 }
 
-li a:nth-last-child {
-  padding-right: 0;
+.last{
+  padding-right: 0 !important;
 }
-
 @media only screen and (max-width: 768px) {
   ul li a {
     padding: 0 1em;
   }
 }
-
 /*-------------------End Navigation-------------------------*/
 /*-------------------Hero Section-------------------------*/
 .hero-content {
@@ -221,8 +211,9 @@ li a:nth-last-child {
   h1 {
     font-size: 1.5em;
   }
-  body{
-    font-size: .9em;
+
+  body {
+    font-size: 0.9em;
   }
 }
 
@@ -261,6 +252,7 @@ button::before {
 }
 /*-------------------End Hero Section-------------------------*/
 /*-------------------Work Section----------------------->*/
+
 .section-intro {
   position: relative;
   top: 15%;
@@ -287,7 +279,7 @@ button::before {
   padding-top: 7vh;
 }
 
-.textcomp{
+.textcomp {
   font-family: "Tiempos Text", serif;
 }
 
@@ -295,7 +287,7 @@ button::before {
   padding-top: 2em;
 }
 
-#XA-link{
+#XA-link {
   color: $primary;
 }
 
@@ -367,22 +359,21 @@ footer {
   padding-bottom: 2em;
   margin: auto;
 }
-
 @media only screen and (max-width: 768px) {
   .work {
     max-width: 100%;
   }
 }
 
-.content-paragraph{
+.content-paragraph {
   font-family: 'Tiempos Text', serif;
   font-size: 1.188em !important;
   line-height: 36px !important;
   opacity: 0.9 !important;
 }
 
-.work-headings{
-  margin: 1.4em 0 .5em 0;
+.work-headings {
+  margin: 1.4em 0 0.5em;
 }
 
 .work ul {
@@ -414,8 +405,8 @@ hr {
 }
 
 .hifi {
-  -webkit-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
-box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
+  -webkit-box-shadow: 0 5px 20px 5px rgba(0,0,0,0.16);
+  box-shadow: 0 5px 20px 5px rgba(0,0,0,0.16);
   overflow: hidden;
 }
 
@@ -424,6 +415,6 @@ box-shadow: 0px 5px 20px 5px rgba(0,0,0,0.16);
   text-align: center;
 }
 
-.project1{
+.project1 {
   background-image: none;
 }
