@@ -128,7 +128,7 @@ h1,h2,{
   }
   @media #{$mq-xxlarge} {
     .container,
-    .wrapper {
+    .wrapper{
       max-width: 1500px !important;
     }
 
@@ -160,13 +160,11 @@ h1,h2,{
 
 
 
-
   /*-------------------Navigation-------------------------*/
 
   header {
     display: flex;
     justify-content: flex-end;
-    max-width: 1000px;
     font-family: 'DIN Next Medium';
   }
 
