@@ -39,20 +39,14 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
     font-size: 12px;
     font-weight: 400;
     position: relative;
-    background-color: $secondary;
-    background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, #f2f2f2;
-    background-size: 200px 1px;
-    z-index: -100;
   }
 
-#dot{
-  content: "";
-  background-color: black;
-  position: absolute;
-  display: block;
-  width: .7rem;
-  height: .7rem;
-}
+  body{
+    background-color: $secondary;
+    background: linear-gradient(90deg, #e8e8e8 .5%, transparent .1%) 1px 0, #f2f2f2;
+    background-size: 300px 1px;
+    z-index: -100;
+  }
 
   ::selection {
     color: #fff;
@@ -80,6 +74,7 @@ h1,h2,{
     font-size: 3rem;
     font-family: 'Tungsten';
     color: $primary;
+    text-transform: uppercase;
   }
 
   p {
@@ -147,16 +142,19 @@ h1,h2,{
     display: block;
   }
 
-  .container {
+  .nav-container {
     top: 0;
     position: fixed;
-    max-width: 1000px;
+    width: 100vw;
     margin: 0 auto;
     position: fixed;
     padding: 1.5em 0;
     background-color: $secondary;
+    border-bottom: 1px solid #eee;
     z-index: 20;
-    padding-right: 1.5em;
+    -webkit-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
+    box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
   }
 
 
@@ -164,16 +162,21 @@ h1,h2,{
 
 
   /*-------------------Navigation-------------------------*/
+
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    max-width: 1000px;
+    font-family: 'DIN Next Medium';
   }
 
   .logo {
     font-size: 1.5rem;
-    letter-spacing: .2;
-    margin: 0;
-    padding-top: 4px;
+    letter-spacing: -.5px;
+    margin-right: auto;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   ul {
@@ -188,6 +191,10 @@ h1,h2,{
 
     .email {
       opacity: 1;
+      padding-right: 0 !important;
+    }
+
+    .fa-envelope{
       padding-right: 0;
     }
 
@@ -239,7 +246,7 @@ h1,h2,{
 
   #intro{
     padding-bottom: 1.5rem;
-    max-width: 700px;
+    max-width: 600px;
   }
 
   .h1hero {
@@ -251,6 +258,7 @@ h1,h2,{
   button {
     margin-top: 0;
     font-size: 1.5rem;
+    font-family: 'DIN Next Medium';
     padding: 16px 30px;
     border: 1px solid $primary;
     cursor: pointer;
@@ -312,16 +320,18 @@ h1,h2,{
     top: 15%;
   }
 
+  .card{
+    padding: 20px 20px;
+    height: 450px;
+  }
+
   #work {
     height: 100%;
     padding-top: 8vh;
   }
 
-  .button1 {
-    background-color: transparent;
-    padding: 11px 18px;
-    color: $primary;
-    border: 1px solid $primary;
+  .img-fluid::before{
+    cursor: pointer;
   }
   /*-------------------End Work Section----------------------->*/
 
@@ -372,6 +382,18 @@ h1,h2,{
     font-family: 'Tungsten';
     font-size: 4rem;
     margin-bottom: 2rem;
+  }
+
+  .iconbar ul li a{
+      padding: 0 !important;
+      opacity: 1;
+  }
+
+
+  @media (max-width: 768px){
+    .iconbar{
+      margin-bottom: 2.5rem;
+    }
   }
   /*-------------------End About Section----------------------->*/
 
@@ -466,7 +488,13 @@ h1,h2,{
 
   .work img {
     width: 100%;
-    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  img{
+    -webkit-box-shadow: 0px 0px 16px 2px rgba(36,36,36,0.24);
+    -moz-box-shadow: 0px 0px 16px 2px rgba(36,36,36,0.24);
+    box-shadow: 0px 0px 16px 2px rgba(36,36,36,0.24);
   }
 
   .hifi {
@@ -481,5 +509,6 @@ h1,h2,{
   }
 
   .project1 {
-    background-image: none;
+    background: none;
+    background-color: $secondary;
 }
