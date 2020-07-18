@@ -40,13 +40,19 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
     font-weight: 400;
     position: relative;
     background-color: $secondary;
-    /*@media #{$mq-xxlarge} {
-      font-size: $base-font-size*1.1;
-    }*/
     background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, #f2f2f2;
     background-size: 200px 1px;
     z-index: -100;
   }
+
+#dot{
+  content: "";
+  background-color: black;
+  position: absolute;
+  display: block;
+  width: .7rem;
+  height: .7rem;
+}
 
   ::selection {
     color: #fff;
