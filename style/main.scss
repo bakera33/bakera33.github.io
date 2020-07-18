@@ -39,12 +39,12 @@ $mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
     font-size: 12px;
     font-weight: 400;
     position: relative;
+  }
+
+  body{
     background-color: $secondary;
-    /*@media #{$mq-xxlarge} {
-      font-size: $base-font-size*1.1;
-    }*/
-    background: linear-gradient(90deg, #eee 1%, transparent 1%) 1px 0, #f2f2f2;
-    background-size: 200px 1px;
+    background: linear-gradient(90deg, #e8e8e8 .5%, transparent .1%) 1px 0, #f2f2f2;
+    background-size: 300px 1px;
     z-index: -100;
   }
 
@@ -142,16 +142,19 @@ h1,h2,{
     display: block;
   }
 
-  .container {
+  .nav-container {
     top: 0;
     position: fixed;
-    max-width: 1000px;
+    width: 100vw;
     margin: 0 auto;
     position: fixed;
     padding: 1.5em 0;
     background-color: $secondary;
+    border-bottom: 1px solid #eee;
     z-index: 20;
-    padding-right: 1.5em;
+    -webkit-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
+    box-shadow: 0px 2px 14px 0px rgba(0,0,0,0.11);
   }
 
 
@@ -162,14 +165,15 @@ h1,h2,{
 
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    max-width: 1000px;
   }
 
   .logo {
     font-size: 1.5rem;
     letter-spacing: .2;
     margin: 0;
-    padding-top: 4px;
+    margin-right: auto;
   }
 
   ul {
@@ -180,10 +184,15 @@ h1,h2,{
       opacity: 0.6;
       text-transform: uppercase;
       font-size: 1.5rem;
+      font-family: 'DIN Next Medium';
     }
 
     .email {
       opacity: 1;
+      padding-right: 0 !important;
+    }
+
+    .fa-envelope{
       padding-right: 0;
     }
 
@@ -247,6 +256,7 @@ h1,h2,{
   button {
     margin-top: 0;
     font-size: 1.5rem;
+    font-family: 'DIN Next Medium';
     padding: 16px 30px;
     border: 1px solid $primary;
     cursor: pointer;
@@ -486,5 +496,6 @@ h1,h2,{
   }
 
   .project1 {
-    background-image: none;
+    background: none;
+    background-color: $secondary;
 }
